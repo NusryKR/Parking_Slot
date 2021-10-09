@@ -42,13 +42,13 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
                 controller: _textController,
                 onSubmitted: _handleSubmitted,
                 decoration:
-                    new InputDecoration.collapsed(hintText: "Send a message"),
+                    new InputDecoration.collapsed(hintText: "Asking for Slot"),
               ),
             ),
             new Container(
               margin: new EdgeInsets.symmetric(horizontal: 4.0),
               child: new IconButton(
-                  icon: new Icon(Icons.send),
+                  icon: new Icon(Icons.mic),
                   onPressed: () => _handleSubmitted(_textController.text)),
             ),
           ],
@@ -80,7 +80,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     _textController.clear();
     ChatMessage message = new ChatMessage(
       text: text,
-      name: "Promise",
+      name: "Driver",
       type: true,
     );
     setState(() {
@@ -94,7 +94,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text("Flutter and Dialogflow"),
+        title: new Text("Parking Slot Finder"),
       ),
       body: new Column(children: <Widget>[
         new Flexible(
